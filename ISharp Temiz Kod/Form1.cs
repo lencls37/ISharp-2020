@@ -1465,9 +1465,9 @@ namespace ISharp_Temiz_Kod
         }
         private void lisans()
         {
-             var request = (HttpWebRequest)WebRequest.Create("http://www.example.com/recepticle.aspx");
-             var postData = "thing1=hello";
-             postData += "&thing2=world";
+             var request = (HttpWebRequest)WebRequest.Create("https://www.lcsgrafik.site/is/lic.php");
+             var postData = "d="+DateTime.Now.ToShortDateString();
+             postData += "&id=" + getHwid();
              var data = Encoding.ASCII.GetBytes(postData);
              request.Method = "POST";
              request.ContentType = "application/x-www-form-urlencoded";
@@ -1481,6 +1481,10 @@ namespace ISharp_Temiz_Kod
             MessageBox.Show("");
         }
 
+        public void getHwid()
+        {
+            
+        }
         private async void btn_Veri_Cikar_ClickAsync(object sender, EventArgs e)
         {
             if(veri_Cikar_konum_al_hash.Checked == true || veri_Cikar_mail_al_hash.Checked == true || veri_Cikar_profil_al_hash.Checked == true || veri_Cikar_Telefon_al_hash.Checked == true)
