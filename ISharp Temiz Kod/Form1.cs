@@ -1481,9 +1481,10 @@ namespace ISharp_Temiz_Kod
             MessageBox.Show("");
         }
 
-        public void getHwid()
+        public string getHwid()
         {
-            
+
+            return "";
         }
         private async void btn_Veri_Cikar_ClickAsync(object sender, EventArgs e)
         {
